@@ -1,0 +1,29 @@
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.contact-info {
+    text-align: left;
+}
+.contact-details p{
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+}
+.contact-details i{
+  margin-right: .75rem;
+  width: 1.2em;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.social-links{
+  margin-top: 1rem;
+}
+.social-links a{
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}

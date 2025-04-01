@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Design Portfolio</title>
+    <link rel="stylesheet" href="style.css">  <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style-button.css">
+    <link rel="stylesheet" href="style-cursor.css">
+    <link rel="stylesheet" href="style-header-nav.css">
+    <link rel="stylesheet" href="style-section-hero.css">
+    <link rel="stylesheet" href="style-section-about.css">
+    <link rel="stylesheet" href="style-section-project.css">
+    <link rel="stylesheet" href="style-section-skill.css">
+    <link rel="stylesheet" href="style-section-contact.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Priyanuj Boruah</a>
+                <span class="designation">Software Engineer and Data Scientist</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+      <div class="hero-content">
+          <div class="hero-text-content">
+              <h1>Hi, I am <br><span class="purple-text">PRIYANUJ</span></h1>
+              <p class="hero-subtitle">I am a Software Engineer and a Data Science student at IIT Madras. I build data-driven solutions and develop web platforms for real-world problems.</p>
+              <a href="#projects" class="custom-btn btn-7"><span>Explore My Work</span></a>
+          </div>
+  
+          <pre class="dot-art hero-dot-art">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⣿⣷⣶⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⡟⠁⣰⣿⣿⣿⡿⠿⠻⠿⣿⣿⣿⣿⣧⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠏⠀⣴⣿⣿⣿⠉⠀⠀⠀⠀⠀⠈⢻⣿⣿⣇⠀⠀⠀
+            ⠀⠀⠀⠀⢀⣠⣼⣿⣿⡏⠀⢠⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⡀⠀⠀
+            ⠀⠀⠀⣰⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀
+            ⠀⠀⢰⣿⣿⡿⣿⣿⣿⡇⠀⠘⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣸⣿⣿⣿⠁⠀⠀
+            ⠀⠀⣿⣿⣿⠁⣿⣿⣿⡇⠀⠀⠻⣿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⣿⣿⠃⠀⠀⠀
+            ⠀⢰⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+            ⠀⢸⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉⢉⣿⣿⠀⠀⠀⠀⠀⠀
+            ⠀⢸⣿⣿⣇⠀⣿⣿⣿⠀⠀⠀⠀⠀⢀⣤⣤⣤⡀⠀⠀⢸⣿⣿⣿⣷⣦⠀⠀⠀
+            ⠀⠀⢻⣿⣿⣶⣿⣿⣿⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣦⡀⠀⠉⠉⠻⣿⣿⡇⠀⠀
+            ⠀⠀⠀⠛⠿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠈⠹⣿⣿⣇⣀⠀⣠⣾⣿⣿⡇⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁⠀⠀⠀⠀
+          </pre>
+      </div>
+  </section>
+
+    <section id="about" class="section">
+      <div class="section-title-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+      </div>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="path/to/your/profile-picture.jpg" alt="[Your Name]">
+            </div>
+            <div class="about-text">
+                <p>Nice to meet you, I'm Priyanuj Boruah. I use my diverse skillset spread across software and game development, data science, machine learning, artificial intelligence and 3d modelling to create innovative and unique solutions that differentiates from the crowd.</p>
+                <p>I am pursuing my Bachelors in Data Science from IIT Madras and am currently in my third year. Apart from acing my degree subjects (topper grades in 8 out of 17 completed), I'm also the previous Computer Science top-scorer of CUET-UG 2022.</p>
+                <a href="path/to/your/resume.pdf" class="custom-btn btn-15" target="_blank" rel="noopener noreferrer">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-title-container">
+         <h2 class="section-title">Featured Projects</h2>
+         <div class="title-underline"></div>
+       </div>
+         <div class="projects-container">
+             <!-- Project 1 -->
+             <div class="project" data-modal-target="#project1-modal">  <!-- Added data attribute -->
+                  <!-- Removed project-overlay div -->
+                  <img src="path/to/project1-image.jpg" alt="Project 1" class="project-image-direct"> <!-- Added image directly -->
+                  <div class="project-info"> <!-- Added container for text -->
+                     <h3 class="project-title">Emotion Analysis Platform</h3>
+                     <p class="project-tags">Full-Stack, Transformers, RDBMS</p>
+                 </div>
+             </div>
+    
+             <!-- Project 2 -->
+             <div class="project" data-modal-target="#project2-modal"> <!-- Added data attribute -->
+                 <!-- Removed project-overlay div -->
+                  <img src="Minimalist Glass.png" alt="Project 2" class="project-image-direct"> <!-- Added image directly -->
+                  <div class="project-info"> <!-- Added container for text -->
+                     <h3 class="project-title">Recipe Recommendation Web Application</h3>
+                     <p class="project-tags">Web Development, Pandas</p>
+                 </div>
+             </div>
+    
+             <!-- Project 3 -->
+             <div class="project" data-modal-target="#project3-modal"> <!-- Added data attribute -->
+                  <!-- Removed project-overlay div -->
+                  <img src="path/to/project3-image.jpg" alt="Project 3" class="project-image-direct"> <!-- Added image directly -->
+                  <div class="project-info"> <!-- Added container for text -->
+                     <h3 class="project-title">Minecraft Inspired Voxel Game</h3>
+                     <p class="project-tags">Algorithm Optimization, Object Oriented Programming</p>
+                 </div>
+             </div>
+             <!-- Project 4 -->
+             <div class="project" data-modal-target="#project4-modal"> <!-- Added data attribute -->
+              <!-- Removed project-overlay div -->
+              <img src="path/to/project4-image.jpg" alt="Project 4" class="project-image-direct"> <!-- Added image directly -->
+              <div class="project-info"> <!-- Added container for text -->
+                 <h3 class="project-title">Advanced Sudoku Solver</h3>
+                 <p class="project-tags">Python, Backtracking</p>
+             </div>
+         </div>
+    
+             <!-- Add more projects as needed, following the same structure -->
+    
+         </div>
+          <div class="button-container">
+            <br><br><a href="https://github.com/PriyanujBoruah" class="custom-btn btn-15">View GitHub Repo</a> <!-- This button remains -->
+         </div>
+    </section>
+
+
+    <!-- Project Modals (Hidden by default) -->
+    <div id="project1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Advanced Emotion Analysis Platform</h2>
+            <p>This project is a full-stack web platform for real-time emotion detection in text.
+              It leverages the power of pre-trained transformer models from Hugging Face to analyze user-provided text and instantly display the probabilities of various emotions.
+              The application provides a user-friendly interface, real-time analysis, user authentication, a history of past analysis, and a responsive UI.
+              <br><br>Supports 18 distinct emotions and achieved 77.52% accuracy on a test set of 21,468 sentences. </p>
+            <a href="https://github.com/PriyanujBoruah/Emotion-Detector-from-Text" class="custom-btn btn-15" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+    </div>
+
+    <div id="project2-modal" class="modal">
+       <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Recipe Recommendation Web Application</h2>
+            <img src="path/to/project2-large-image.jpg" alt="Project 2">
+            <p>This project is web application that helps users find recipes based on their preferred ingredients. 
+              It's built using Python (Flask, Pandas) for the backend and HTML, CSS and JavaScript for the frontend. 
+              The applications provides a user-friendly interface for searching recipes based on ingredients and browsing random recipes suggestions.
+              <br><br>Implemented efficient ingredient matching and filtering algorithms using Pandas DataFrames for optimized performance and
+              successfully processed 4,466 recipes and returned results in under 0.5 seconds.</p>
+            <a href="https://github.com/PriyanujBoruah/Recipe-Recommender" class="custom-btn btn-15" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+    </div>
+
+    <div id="project3-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Minecraft Inspired Voxel Game</h2>
+            <p>Developed a 3D voxel game in Python, implementing efficient data structures and algorithms for terrain generation, world 
+              rendering, and object manipulation.  
+              <br><br>Achieved 38% frame rate increase and improved performance through optimization techniques such as frustum culling. 
+              Applied mathematical and computational techniques to simulate and render a complex dynamic environment.  </p>
+            <a href="https://github.com/PriyanujBoruah/Voxel-Game-Python" class="custom-btn btn-15" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+    </div>
+  
+    <div id="project4-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-modal">×</span>
+          <h2>Advanced Sudoku Solver</h2>
+          <p>This project is a comprehensive Sudoku Solver application built using Python and Streamlit, implementing an efficient backtracking 
+            algorithm; with the option for solving a sudoku from user input or generate multiple random sudokus for benchmarking.
+            <br><br>Successfully tested and validated against 6,482 Sudoku puzzles, solving the entire set in 5.62 seconds with an average time of 0.00087 
+            seconds per puzzle; ensuring performance, reliability and accuracy in performance.  </p>
+          <a href="https://github.com/PriyanujBoruah/Sudoku-Solver" class="custom-btn btn-15" target="_blank" rel="noopener noreferrer">View Live</a>
+      </div>
+    </div>
+
+
+
+    <section id="skills" class="section">
+      <div class="section-title-container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="title-underline"></div>
+      </div>
+        <div class="skills-container">
+          <div class="skills-group">
+                <h3>Languages</h3>
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> Python</li>
+                  <li><i class="fas fa-check-circle"></i> Java</li>
+                  <li><i class="fas fa-check-circle"></i> C++</li>
+                  <li><i class="fas fa-check-circle"></i> HTML</li>
+                  <li><i class="fas fa-check-circle"></i> CSS</li>
+                  <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                  <!-- Add more design skills -->
+                </ul>
+          </div>
+          <div class="skills-group">
+            <h3>Technologies</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> TensorFlow</li>
+              <li><i class="fas fa-check-circle"></i> Hugging Face</li>
+              <li><i class="fas fa-check-circle"></i> Flask</li>
+              <li><i class="fas fa-check-circle"></i> SQL Databases</li>
+              <li><i class="fas fa-check-circle"></i> Streamlit</li>
+              <li><i class="fas fa-check-circle"></i> AWS / Google Cloud</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3>Tools</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Scikit-learn</li>
+              <li><i class="fas fa-check-circle"></i> Numpy</li>
+              <li><i class="fas fa-check-circle"></i> Pandas</li>
+              <li><i class="fas fa-check-circle"></i> Transformers</li>
+              <li><i class="fas fa-check-circle"></i> and much more</li>
+            </ul>
+          </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-title-container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="title-underline"></div>
+      </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.</p>
+                <div class="contact-details">
+                  <p><i class="fas fa-envelope"></i> <a href="mailto:boruahpriyanuj2004@gmail.com">boruahpriyanuj2004@gmail.com</a></p>
+                  <p><i class="fas fa-phone"></i> +91 70023-90184</p>
+                  <p><i class="fas fa-map-marker-alt"></i> India</p>
+                </div>
+                <div class="social-links">
+                    <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="[Your Behance/Dribbble URL]" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a>  <!-- Or Dribbble -->
+                    <a href="[Your Twitter/X URL]" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>  <!-- Or other socials -->
+                    <!-- Add more social links -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© <span id="current-year"></span> Priyanuj Boruah. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!--  GSAP (GreenSock Animation Platform) -  For advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</body>
+</html>

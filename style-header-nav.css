@@ -1,0 +1,108 @@
+/* Header and Navigation - Glassmorphism Effect */
+header {
+    background: #1212120a;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* --- END: Glassmorphism Styles --- */
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+
+header,
+header .logo a,
+header .designation,
+header .menu-toggle {
+    color: #745DFD;
+}
+
+header .nav-links li a {
+    color: #555;
+    font-size: medium;
+}
+
+
+
+header .nav-links li a:hover {
+    color: #745DFD;
+}
+
+header .nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #745DFD;
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0px transparent, 0 0 0px transparent inset;
+}
+
+header .nav-links li a:hover::after {
+    width: 100%;
+    background-color: #745DFD;
+    box-shadow: 0 0 5px #745DFD, 0 0 5px #745DFD inset;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.designation {
+    display: block;
+    font-size: .8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a {
+    position: relative;
+    padding-bottom: .25rem;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    nav {
+        justify-content: flex-start;
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,201 @@
+/* Modify .project styles */
+.projects-container {
+  display: grid;
+  /* --- CHANGE THIS LINE --- */
+  /* From: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* To: Explicitly define 2 equal columns */
+  grid-template-columns: 1fr 1fr;
+  /* --- END CHANGE --- */
+  gap: 2rem; /* Keep the gap between items */
+}
+
+@media (max-width: 768px) { /* Breakpoint for switching to 1 column */
+  .projects-container {
+      /* Switch to a single column layout on smaller screens */
+      grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  position: relative; /* Needed for absolute positioning of ::after */
+  overflow: hidden;  /* Essential to clip the pseudo-element */
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+/* Style the project info to sit above the glint */
+.project-info {
+  padding: 1rem 1.5rem;
+  flex-grow: 1;
+  position: relative; /* z-index dependence */
+  z-index: 2; /* Ensure text is above the glint */
+}
+
+/* --- Glint Effect --- */
+.project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200%; /* Start position: Off-screen to the left */
+  width: 200%; /* Width of the glint */
+  height: 100%;
+  /* Angled gradient for the shine effect */
+  background: linear-gradient(
+      100deg, /* Angle of the gradient */
+      #755dfd00 0%,
+      #755dfd25 50%, /* Adjust opacity for intensity */
+      #755dfd00 100%
+  );
+  /* Slight skew to match the gradient angle visually */
+  transform: skewX(-20deg);
+  /* Transition for the movement */
+  transition: left 0.65s ease-out; /* Example smooth timing */
+  z-index: 1; /* Sit between background/image and text */
+  pointer-events: none; /* Don't block clicks */
+}
+
+.project:hover::after {
+  /* End position: Off-screen to the right */
+  left: 110%;
+  /* The transition defined on .project::after handles the animation */
+}
+/* --- End Glint Effect --- */
+
+
+.project-image-direct {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /*border-color: #745DFD;  Hover border color */
+}
+
+.project-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+.project-tags {
+  color: #888; /* Base tags color */
+  font-size: 0.9rem;
+  /* --- Add transition for smooth color change --- */
+  transition: color 0.3s ease;
+}
+
+/* --- NEW: Text color change on project hover --- */
+.project:hover .project-title {
+  color: #745DFD; /* Title color on hover (matches border) */
+}
+
+.project:hover .project-tags {
+  color: #b9aafb; /* Lighter purple/gray for tags on hover */
+  /* Or use the same color as the title: */
+  /* color: #745DFD; */
+  /* Or a lighter gray: */
+  /* color: #bbb; */
+}
+
+.project-tags {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.button-container {
+  text-align: center;
+}
+
+
+  
+  
+/* Project Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 200; /* Above other content, but below header */
+    overflow-y: auto; /* Enable scrolling if content is long */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 80%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Define the gradient */
+    background: linear-gradient(
+        135deg, /* Angle of the gradient */
+        #f8f0ff, /* Light lavender */
+        #755dfd50, /* Slightly darker lavender */
+        #dff1ff, /* Light blue */
+        #e8dfff, /* Back to lavender */
+        #f8f0ff  /* End with light lavender */
+    );
+    /* Make the background larger than the element */
+    background-size: 400% 400%;
+    /* Apply the animation */
+    animation: gradientFlow 5s ease infinite;
+}
+
+/* --- Define the animation keyframes --- */
+@keyframes gradientFlow {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+/* --- END Gradient Background --- */
+
+.modal-content img{
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.close-modal:hover {
+  color: #745DFD; /* Your accent color on hover */
+  transform: rotate(90deg); /* Add a subtle rotation on hover */
+}
+
+.modal-content p{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+

@@ -1,0 +1,127 @@
+/* --- Custom Scrollbar Styles --- */
+
+/* For Webkit browsers (Chrome, Safari, Edge, Opera, etc.) */
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Light grey track, blends with white background */
+    border-radius: 10px; /* Optional: round the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #745DFD; /* Your primary accent color for the thumb */
+    border-radius: 10px;   /* Roundness of the scroll thumb */
+    /* Optional: Add a border to make thumb distinct from track */
+    border: 2px solid #f0f0f0; /* Match track color for a padding effect */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #745DFD; /* Slightly darker purple on hover */
+}
+
+/* Optional: Style the corner where vertical/horizontal scrollbars meet */
+body::-webkit-scrollbar-corner {
+  background: #f0f0f0; /* Match track color */
+}
+
+/* For Firefox */
+/* Note: Firefox offers less customization (only color and width) */
+html { /* Apply to html element for Firefox */
+  scrollbar-width: auto; /* Options: 'auto', 'thin', 'none' */
+  scrollbar-color: #745DFD #f0f0f0; /* Format: thumb-color track-color */
+}
+
+
+
+::selection {
+    background: #755dfd90; /* Your desired purple background color */
+    color: #FFFFFF;    /* White text color for good contrast */
+    /* text-shadow: none; Optional: remove any text shadow if present */
+}
+
+/* Firefox specific syntax (good practice for older versions) */
+::-moz-selection {
+    background: #745DFD90; /* Must repeat background for Firefox */
+    color: #FFFFFF;    /* Must repeat text color for Firefox */
+    /* text-shadow: none; */
+}
+
+/* --- NEW: Force hiding default cursor on interactive elements --- */
+/* Apply to common interactive elements */
+span,
+a,
+button,
+input,
+textarea,
+select, /* Add other form elements if needed */
+label, /* Sometimes labels have default cursors */
+.project, /* Your clickable project cards */
+.menu-toggle, /* Your mobile menu button */
+[role="button"], /* Elements acting like buttons */
+[onclick] /* Elements with inline click handlers */
+{
+    cursor: none; /* Hide default cursor on the elements themselves */
+}
+
+/* Explicitly hide on hover too, just to be absolutely sure */
+span:hover,
+a:hover,
+button:hover,
+input:hover,
+textarea:hover,
+select:hover,
+label:hover,
+.project:hover,
+.menu-toggle:hover,
+[role="button"]:hover,
+[onclick]:hover
+{
+     cursor: none;
+}
+/* --- End NEW --- */
+
+
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #D759F6;
+    mix-blend-mode:darken;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    opacity: 0; /* Start hidden */
+}
+
+.custom-cursor.visible {
+    opacity: 1; /* Fade in when mouse enters */
+}
+
+
+.custom-cursor.cursor-hover-link {
+    width: 15px;
+    height: 15px;
+    background-color: #745DFD;
+}
+
+/* Optional: Hide cursor on small screens/touch devices */
+@media (max-width: 768px) {
+ /* Restore default cursor and hide custom one on mobile */
+    body { cursor: auto !important; } /* Use !important if needed */
+    .custom-cursor { display: none !important; } /* Use !important if needed */
+
+    /* Also ensure interactive elements get default cursor back on mobile */
+    a, button, input, textarea, select, label, .project, .menu-toggle, [role="button"], [onclick] {
+        cursor: auto !important; /* Or specify 'pointer', 'text' etc. as appropriate */
+    }
+     a:hover, button:hover, input:hover, textarea:hover, select:hover, label:hover, .project:hover, .menu-toggle:hover, [role="button"]:hover, [onclick]:hover {
+         cursor: auto !important; /* Or specify 'pointer', 'text' etc. as appropriate */
+    }
+}

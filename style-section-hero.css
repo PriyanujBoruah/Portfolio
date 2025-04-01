@@ -1,0 +1,163 @@
+/* Hero Section */
+#hero {
+    display: flex; /* Keep this for overall centering if needed, or change */
+    align-items: center; /* Vertically center content in the section */
+    /* justify-content: center; */ /* Remove this if using flex on hero-content */
+    padding: 6rem 2rem; /* Increased top/bottom padding */
+    min-height: 80vh; /* Increased min-height */
+    position: relative;
+    overflow: hidden; /* Prevent dot art overflow if it swings wide */
+  }
+  
+  .hero-content {
+    /* max-width: 800px; */ /* Remove max-width or increase significantly */
+    max-width: 1200px; /* Use the standard page max-width */
+    margin: 0 auto;
+    width: 100%; /* Take full available width */
+  
+    /* --- Flexbox Layout --- */
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: center;        /* Vertically align items */
+    gap: 3rem;                  /* Space between text and dot art */
+  }
+  
+  .hero-text-content {
+    flex-basis: 55%; /* Give text slightly more space */
+    text-align: left;   /* Ensure text inside is left-aligned */
+  }
+  
+  /* Style the H1 */
+  .hero-text-content h1 {
+    font-size: 4.5rem; /* Apply font size from inline style */
+    font-weight: 700; /* Example weight */
+    line-height: 1.2;
+    margin-bottom: 1rem; /* Space below heading */
+  }
+  
+  .hero-image{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add a slight border-radius */
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Styles for the Dot Art */
+  .dot-art {
+    font-family: monospace; /* Crucial for alignment */
+    line-height: 1.1;       /* Adjust spacing between lines */
+    font-size: 12px;        /* Control the overall size - adjust as needed! */
+    color: #666;           /* Choose a color - subtle gray or accent color */
+    text-align: center;     /* Center the art block */
+    margin: 2rem auto;      /* Add some space around it */
+    overflow-x: auto;       /* Add scrollbar if it overflows horizontally on small screens */
+    white-space: pre;       /* Ensure whitespace and line breaks are preserved */
+    -webkit-user-select: none; /* Optional: Prevent accidental text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Specific adjustments if needed for the hero section */
+  .hero-dot-art {
+    color: #745DFD;
+    animation: swing-alternate 3s ease-in-out infinite alternate;
+    flex-basis: 40%;  /* Take up remaining space */
+    margin: 0;       /* Remove auto margins */
+    /* font-size: 10px; */ /* Keep existing size or adjust */
+    /* line-height: 1.1; */ /* Keep existing style */
+    /* Adjust scale if needed for balance */
+    transform-origin: center center; /* Ensure swing is centered */
+    /* Maybe slightly smaller on desktop? */
+    /* font-size: 9px; */
+  }
+  /* Responsive adjustments for dot art */
+  @media (max-width: 992px) { /* Adjust breakpoint if needed */
+    .hero-text-content h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+     .hero-dot-art {
+        font-size: 8px; /* Make dot art smaller */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero {
+        padding: 4rem 1rem; /* Adjust padding for mobile */
+        min-height: auto; /* Remove min-height */
+        text-align: center; /* Center alignment for stacked items */
+    }
+  
+    .hero-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;     /* Center items horizontally */
+        gap: 2rem;               /* Adjust gap for vertical stacking */
+    }
+  
+    .hero-text-content {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%;     /* Take full width */
+        text-align: center; /* Center text block */
+        order: 1;        /* Display text below dot art */
+    }
+     .hero-text-content h1 {
+        font-size: 2.8rem; /* Smaller heading for mobile */
+        text-align: center;
+    }
+  
+     .hero-subtitle {
+         font-size: 1rem;
+         margin-bottom: 2rem;
+     }
+  
+  
+    .hero-dot-art {
+        flex-basis: auto; /* Reset flex basis */
+        margin: 0 auto 2rem auto; /* Add margin below when stacked */
+        order: 0; /* Display dot art above text */
+        font-size: 7px; /* Adjust size */
+        /* Consider pausing animation on mobile if it's distracting */
+        /* animation-play-state: paused; */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dot-art {
+        font-size: 6px; /* Even smaller on very small screens */
+        /* Or consider hiding it if it's too much: display: none; */
+    }
+  }
+  
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg); /* Start centered */
+    }
+    25% {
+      transform: rotate(-8deg); /* Swing left (adjust angle as needed) */
+    }
+    75% {
+      transform: rotate(8deg); /* Swing right (adjust angle as needed) */
+    }
+    100% {
+      transform: rotate(0deg); /* End centered */
+    }
+  }
+  
+  /* Alternative simpler swing using 'alternate' direction */
+  @keyframes swing-alternate {
+     from {
+         transform: rotate(-8deg); /* Start tilted left */
+     }
+     to {
+         transform: rotate(8deg); /* End tilted right */
+     }
+  }
+  
+  .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      color: #555;
+      font-weight: 300;
+      line-height: 1.4;
+  }

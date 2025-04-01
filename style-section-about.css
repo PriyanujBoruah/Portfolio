@@ -1,0 +1,21 @@
+/* About Section */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 2rem;
+    align-items: center; /* Vertically center content */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
+}
+
+.about-text {
+  text-align: left;
+}
+.about-text p{
+  margin-bottom: 1rem;
+}
